@@ -6,7 +6,13 @@ by Sean Sungil Kim
 
 <p align="center">
   <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/DCGAN.gif">
-  <b>V.S.</b><br>                   
+</p>
+
+<p align="center">
+  <b>V.S.</b><br>  
+</p>
+
+<p align="center">
   <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%201.png">
   <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%202.png">
   <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%203.png">
