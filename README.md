@@ -5,7 +5,7 @@ using Python
 by Sean Sungil Kim
 
 <p align="center">
-  <b>Generated Images over Epochs</b><br>  
+  <b>Generated Images over 2500 Epochs</b><br>  
 </p>
 
 <p align="center">
