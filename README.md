@@ -13,9 +13,9 @@ by Sean Sungil Kim
 </p>
 
 <p align="center">
-  
-  <b>V.S.</b><br>  
-  
+  <b></b><br>
+  <b>V.S.</b><br>
+  <b></b><br>
 </p>
 
 <p align="center">
