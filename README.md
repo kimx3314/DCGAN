@@ -20,7 +20,7 @@ by Sean Sungil Kim
 </p>
 
 <p align="center">
-  <b>Actual Target Images</b><br>  
+  <b>Target Image Examples</b><br>  
 </p>
 
 <p align="center">
