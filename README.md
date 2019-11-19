@@ -5,11 +5,19 @@ using Python
 by Sean Sungil Kim
 
 <p align="center">
+  <b>Generated Images over Epochs</b><br>  
+</p>
+
+<p align="center">
   <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/DCGAN.gif">
 </p>
 
 <p align="center">
   <b>V.S.</b><br>  
+</p>
+
+<p align="center">
+  <b>Actual Target Images</b><br>  
 </p>
 
 <p align="center">
