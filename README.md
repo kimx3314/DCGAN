@@ -4,9 +4,7 @@ using Python
 
 by Sean Sungil Kim
 
-![alt text](https://github.com/kimx3314/DCGAN/blob/master/DCGAN.gif)
-
-![alt text](https://github.com/kimx3314/DCGAN/blob/master/example%201.png)
+![alt text](https://github.com/kimx3314/DCGAN/blob/master/DCGAN.gif) V.S. ![alt text](https://github.com/kimx3314/DCGAN/blob/master/example%201.png)
 
 ![alt text](https://github.com/kimx3314/DCGAN/blob/master/example%202.png)
 
