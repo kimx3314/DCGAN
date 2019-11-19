@@ -6,7 +6,7 @@ by Sean Sungil Kim
 
 <p align="center">
   <b>Generated Images over 2500 Epochs</b><br>
-  every 3 Epochs
+  (Every 3 Epochs)
 </p>
 
 <p align="center">
