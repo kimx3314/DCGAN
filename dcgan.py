@@ -19,7 +19,6 @@ import scipy.misc
 
 
 def get_args():
-    
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', type = str, default = 'train')
     parser.add_argument('--image_size', type = int, default = 96)
@@ -33,9 +32,7 @@ def get_args():
     
     return args
 
-
 def generator_model():
-    
     model = Sequential()
     model.add(Dense(12*9*256, input_shape = (96, )))
     model.add(BatchNormalization())
@@ -51,9 +48,7 @@ def generator_model():
     
     return model
 
-
 def discriminator_model(image_size):
-    
     model = Sequential()
     model.add(Conv2D(64, (5, 5), strides = (2, 2), padding = 'same', data_format = "channels_last", input_shape = (96, 72, 1)))
     model.add(LeakyReLU())
@@ -67,9 +62,7 @@ def discriminator_model(image_size):
     
     return model
 
-
 def generator_containing_discriminator(generator, discriminator):
-    
     model = Sequential()
     model.add(generator)
     discriminator.trainable = False
@@ -77,11 +70,8 @@ def generator_containing_discriminator(generator, discriminator):
     
     return model
 
-
 def data_load(image_size, txt_dir):
-
     txt_lst = glob.glob(txt_dir)
-    
     cnt = 0
     for txt_file in txt_lst:
         if cnt == 0:
@@ -94,9 +84,7 @@ def data_load(image_size, txt_dir):
     
     return data_scaled
 
-
 def train(image_size, batch_size, num_epoch, txt_dir, image_dir):
-
     X_train = data_load(image_size, txt_dir)
     discriminator = discriminator_model(image_size)
     generator = generator_model()
@@ -145,7 +133,6 @@ def train(image_size, batch_size, num_epoch, txt_dir, image_dir):
                     scipy.misc.imsave(image_dir + '/' + str(epoch + 1) + '_' + str(i) + '.png', gen_img)
 
 def main():
-    
     args = get_args()
     BUFFER_SIZE = 60000
     BATCH_SIZE = 256
@@ -169,3 +156,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
