@@ -40,28 +40,14 @@ def generator_model():
     model.add(Dense(12*9*256, input_shape = (96, )))
     model.add(BatchNormalization())
     model.add(LeakyReLU())
-
     model.add(Reshape((12,9,256), input_shape = (12*9*256, )))
-
-    model.add(Conv2DTranspose(128, (5, 5), strides = (2, 2),
-                                           padding = 'same',
-                                           use_bias = False,
-                                           data_format = "channels_last",))
+    model.add(Conv2DTranspose(128, (5, 5), strides = (2, 2), padding = 'same', use_bias = False, data_format = "channels_last",))
     model.add(BatchNormalization())
     model.add(LeakyReLU())
-
-    model.add(Conv2DTranspose(64, (5, 5), strides = (2, 2),
-                                          padding = 'same',
-                                          use_bias = False,
-                                          data_format = "channels_last"))
+    model.add(Conv2DTranspose(64, (5, 5), strides = (2, 2), padding = 'same', use_bias = False, data_format = "channels_last"))
     model.add(BatchNormalization())
     model.add(LeakyReLU())
-
-    model.add(Conv2DTranspose(1, (5, 5), strides = (2, 2),
-                                         padding = 'same',
-                                         use_bias = False,
-                                         data_format = "channels_last", 
-                                         activation = 'tanh'))
+    model.add(Conv2DTranspose(1, (5, 5), strides = (2, 2), padding = 'same', use_bias = False, data_format = "channels_last", activation = 'tanh'))
     
     return model
 
@@ -69,19 +55,12 @@ def generator_model():
 def discriminator_model(image_size):
     
     model = Sequential()
-    model.add(Conv2D(64, (5, 5), strides = (2, 2),
-                                 padding = 'same',
-                                 data_format = "channels_last",
-                                 input_shape = (96, 72, 1)))
+    model.add(Conv2D(64, (5, 5), strides = (2, 2), padding = 'same', data_format = "channels_last", input_shape = (96, 72, 1)))
     model.add(LeakyReLU())
     model.add(Dropout(0.3))
-
-    model.add(Conv2D(128, (5, 5), strides = (2, 2),
-                                  padding = 'same',
-                                  data_format = "channels_last"))
+    model.add(Conv2D(128, (5, 5), strides = (2, 2), padding = 'same', data_format = "channels_last"))
     model.add(LeakyReLU())
     model.add(Dropout(0.3))
-
     model.add(Dense(32))
     model.add(Flatten())
     model.add(Dense(1))
@@ -164,49 +143,6 @@ def train(image_size, batch_size, num_epoch, txt_dir, image_dir):
                     scipy.misc.imsave(image_dir + '/' + ('0'*(4-len(str(epoch + 1)))) + str(epoch + 1) + '_' + str(i) + '.png', gen_img)
                 else:
                     scipy.misc.imsave(image_dir + '/' + str(epoch + 1) + '_' + str(i) + '.png', gen_img)
-                    
-                    
-'''
-def generate(image_size, batch_size, pretty, image_dir):
-    
-    generator = generator_model()
-    generator.compile(loss = 'binary_crossentropy', optimizer = "SGD")
-    generator.load_weights('generator_weights')
-    
-    if pretty:
-        discriminator = discriminator_model(image_size)
-        discriminator.compile(loss = 'binary_crossentropy', optimizer = "SGD")
-        discriminator.load_weights('discriminator_weights')
-        noise = np.zeros((batch_size * 20, 96))
-        
-        for i in range(batch_size * 20):
-            noise[i, :] = np.random.normal(-1, 1, 96)
-            
-        generated_images = generator.predict(noise, verbose = 1)
-        d_pret = discriminator.predict(generated_images, verbose = 1)
-        index = np.arange(0, batch_size * 20)
-        index.resize((batch_size * 20, 1))
-        pre_with_index = list(np.append(d_pret, index, axis = 1))
-        pre_with_index.sort(key = lambda x: x[0], reverse = True)
-        pretty_images = np.zeros((batch_size, 1) + (generated_images.shape[2:]), dtype = np.float32)
-        
-        for i in range(int(batch_size)):
-            idx = int(pre_with_index[i][1])
-            pretty_images[i, 0, :, :] = generated_images[idx, 0, :, :]
-            
-        image = combine_images(pretty_images)
-    else:
-        noise = np.zeros((batch_size, 96))
-        
-        for i in range(batch_size):
-            noise[i, :] = np.random.normal(-1, 1, 96)
-            
-        generated_images = generator.predict(noise, verbose = 1)
-        image = combine_images(generated_images)
-        
-    Image.fromarray(image.astype(np.uint8)).save(image_dir + "/generated_image.png")
-'''
-
 
 def main():
     
