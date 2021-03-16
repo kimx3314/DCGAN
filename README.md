@@ -10,7 +10,7 @@ by Sean Sungil Kim
 </p>
 
 <p align="center">
-  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/DCGAN.gif">
+  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/RESULTS/DCGAN.gif">
 </p>
 
 <p align="center">
@@ -24,10 +24,10 @@ by Sean Sungil Kim
 </p>
 
 <p align="center">
-  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%201.png">
-  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%202.png">
-  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%203.png">
-  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%204.png">
-  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%205.png">
-  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/example%206.png">
+  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/RESULTS/example%201.png">
+  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/RESULTS/example%202.png">
+  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/RESULTS/example%203.png">
+  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/RESULTS/example%204.png">
+  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/RESULTS/example%205.png">
+  <img width="100" height="140" src="https://github.com/kimx3314/DCGAN/blob/master/RESULTS/example%206.png">
 </p>
